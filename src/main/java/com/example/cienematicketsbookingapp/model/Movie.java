@@ -5,16 +5,14 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class Room {
+public class Movie {
     @Id
     @GeneratedValue
     @Column(name = "id")
     private Integer id;
     private String name;
-    @OneToMany(mappedBy = "room")
-    private List<Seat> seats;
-    @OneToOne(mappedBy = "room")
-    private Screening screening;
+    @OneToMany(mappedBy = "movie")
+    private List<Screening> screenings;
 
     public Integer getId() {
         return id;
@@ -32,25 +30,17 @@ public class Room {
         this.name = name;
     }
 
-    public List<Seat> getSeats() {
-        return seats;
+    public List<Screening> getScreenings() {
+        return screenings;
     }
 
-    public void setSeats(List<Seat> seats) {
-        this.seats = seats;
-    }
-
-    public Screening getScreening() {
-        return screening;
-    }
-
-    public void setScreening(Screening screening) {
-        this.screening = screening;
+    public void setScreenings(List<Screening> screenings) {
+        this.screenings = screenings;
     }
 
     @Override
     public String toString() {
-        return "Room{" +
+        return "Movie{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

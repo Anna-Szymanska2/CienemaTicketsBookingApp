@@ -5,32 +5,39 @@ values (2, 'Second room');
 insert into room(id, name)
 values (3, 'Third room');
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (1,'Władca Pierścieni: Drużyna Pierścienia', '2023-05-23 15:00','2023-05-23 17:30', 1);
+insert into movie(id, name)
+values (1,'Władca Pierścieni: Drużyna Pierścienia');
+insert into movie(id, name)
+values (2,'Władca Pierścieni: Dwie Wieże');
+insert into movie(id, name)
+values (3,'Władca Pierścieni: Powrót Króla');
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (2,'Władca Pierścieni: Drużyna Pierścienia', '2023-05-24 16:00','2023-05-24 18:30', 2);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (1,1, '2023-05-23 15:00','2023-05-23 17:30', 1);
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (3,'Władca Pierścieni: Drużyna Pierścienia', '2023-05-25 18:00','2023-05-25 20:30', 3);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (2,1, '2023-05-24 16:00','2023-05-24 18:30', 2);
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (4,'Władca Pierścieni: Dwie wieże', '2023-05-23 15:30','2023-05-23 18:30', 2);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (3,1, '2023-05-25 18:00','2023-05-25 20:30', 3);
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (5,'Władca Pierścieni: Dwie wieże', '2023-05-24 19:30','2023-05-24 22:30', 3);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (4,2, '2023-05-23 15:30','2023-05-23 18:30', 2);
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (6,'Władca Pierścieni: Dwie wieże', '2023-05-25 17:30','2023-05-25 20:00', 1);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (5,2, '2023-05-24 19:30','2023-05-24 22:30', 3);
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (7,'Władca Pierścieni: Powrót Króla', '2023-05-23 17:30','2023-05-23 21:00', 3);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (6,2, '2023-05-25 17:30','2023-05-25 20:00', 1);
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (8,'Władca Pierścieni: Powrót Króla', '2023-05-24 15:30','2023-05-24 19:00', 1);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (7,3, '2023-05-23 17:30','2023-05-23 21:00', 3);
 
-insert into screening (id,movie, start_date, end_date,room_id )
-values (9,'Władca Pierścieni: Powrót Króla', '2023-05-25 17:00','2023-05-25 20:30', 2);
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (8,3, '2023-05-24 15:30','2023-05-24 19:00', 1);
+
+insert into screening (id,movie_id, start_date, end_date,room_id )
+values (9,3, '2023-05-25 17:00','2023-05-25 20:30', 2);
 
 INSERT INTO seat (ID, NAME, ROW_NAME, COLUMN_NAME, ROOM_ID)
 VALUES (1, 'A1', 'A', 1, 1);
