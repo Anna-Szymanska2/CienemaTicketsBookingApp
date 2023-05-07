@@ -1,4 +1,4 @@
-package com.example.cienematicketsbookingapp.model;
+package com.example.cinematicketsbookingapp.model;
 
 import jakarta.persistence.*;
 
@@ -10,8 +10,6 @@ public class Seat {
     private Integer id;
     private String name;
     private String rowName;
-
-
     private int columnName;
     @ManyToOne
     private Room room;

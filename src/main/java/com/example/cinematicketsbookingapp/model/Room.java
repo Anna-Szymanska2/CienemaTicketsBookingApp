@@ -1,5 +1,6 @@
-package com.example.cienematicketsbookingapp.model;
+package com.example.cinematicketsbookingapp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -13,8 +14,9 @@ public class Room {
     private String name;
     @OneToMany(mappedBy = "room")
     private List<Seat> seats;
-    @OneToOne(mappedBy = "room")
-    private Screening screening;
+    @JsonIgnore
+    @OneToMany(mappedBy = "room")
+    private List<Screening> screening;
 
     public Integer getId() {
         return id;
@@ -40,11 +42,11 @@ public class Room {
         this.seats = seats;
     }
 
-    public Screening getScreening() {
+    public List<Screening> getScreening() {
         return screening;
     }
 
-    public void setScreening(Screening screening) {
+    public void setScreening(List<Screening> screening) {
         this.screening = screening;
     }
 

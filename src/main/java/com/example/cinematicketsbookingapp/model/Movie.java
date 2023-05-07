@@ -1,4 +1,4 @@
-package com.example.cienematicketsbookingapp.model;
+package com.example.cinematicketsbookingapp.model;
 
 import jakarta.persistence.*;
 

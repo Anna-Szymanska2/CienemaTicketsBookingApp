@@ -1,15 +1,12 @@
-package com.example.cienematicketsbookingapp.model;
+package com.example.cinematicketsbookingapp.model;
 
-import com.example.cienematicketsbookingapp.jpa.MovieRepository;
-import org.springframework.data.jpa.domain.Specification;
+import com.example.cinematicketsbookingapp.jpa.MovieRepository;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.function.Predicate;
-
-import static com.example.cienematicketsbookingapp.model.MovieSpecifications.hasScreeningWithStartDateGreaterThan;
 
 @RestController
 public class MovieResource {

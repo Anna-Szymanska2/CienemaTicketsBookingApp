@@ -92,5 +92,9 @@ SELECT ID + 30, NAME, ROW_NAME, COLUMN_NAME, 3
 FROM seat
 WHERE ID BETWEEN 1 AND 15;
 
+insert into reservation (ID, 	NAME, 	SURNAME,  	SCREENING_ID , 	SEAT_ID )
+values (1, 'Ania', 'Szyamsnka', 1, 1);
+
+
 
 

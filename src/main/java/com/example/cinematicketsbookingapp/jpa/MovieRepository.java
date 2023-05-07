@@ -1,6 +1,6 @@
-package com.example.cienematicketsbookingapp.jpa;
+package com.example.cinematicketsbookingapp.jpa;
 
-import com.example.cienematicketsbookingapp.model.Movie;
+import com.example.cinematicketsbookingapp.model.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

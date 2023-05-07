@@ -1,4 +1,4 @@
-package com.example.cienematicketsbookingapp.model;
+package com.example.cinematicketsbookingapp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -21,8 +21,7 @@ public class Screening {
     @JsonIgnore
     @OneToMany(mappedBy = "screening")
     private List<Reservation> reservations;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "room_id", referencedColumnName = "id")
+    @ManyToOne
     @JsonIgnore
     private Room room;
 
